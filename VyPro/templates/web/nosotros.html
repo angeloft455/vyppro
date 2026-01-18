@@ -1,0 +1,80 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block contenido %}
+
+<section class="container">
+    <div class="row align-items-center gx-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="p-2 bg-white shadow-sm">
+                <img src="{% static 'img/logovyppro.jpeg' %}" class="img-fluid rounded-3" alt="VyPro Servicios">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h2 class="display-5 title fw-bold mb-3"><span class="border-start border-4 border-primary ps-3">Sobre Nosotros</span></h2>
+            <p class="lead text-dark" style="font-weight: 400;">En <strong>VYPRO</strong>, nos especializamos en ofrecer servicios de aseo y limpieza profesional para colegios e instituciones educativas.</p>
+            <p class="lead text-dark" style="font-weight: 400;">Contamos con una sólida trayectoria en el área de la educación, brindando un servicio <strong>confiable, eficiente y adaptado</strong> a los más altos estándares de higiene exigidos por la normativa actual.</p>
+            <p class="lead text-dark" style="font-weight: 400;">Nuestra empresa se caracteriza por su compromiso y atención personalizada. Gracias a nuestra experiencia y respaldo, hemos logrado posicionarnos como una opción confiable en el rubro.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-3 my-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="text-center p-5 bg-white rounded-4 shadow-sm h-100 card-valor">
+                    <h3 class="title"> <i class="bi bi-bullseye fs-1"></i>  Misión</h3>
+                    <p class="text-dark mb-0">Proveer servicios de limpieza de alta calidad, asegurando entornos limpios, seguros y saludables para nuestros clientes, mediante un equipo humano altamente capacitado y tecnología eficiente</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="text-center p-5 bg-white rounded-4 shadow-sm h-100 card-valor">
+                    <h3 class="title"><i class="bi bi-eye fs-1"></i>  Visión</h3>
+                    <p class="text-dark mb-0">Ser la empresa referente y líder en soluciones de limpieza profesional a nivel nacional, reconocida por nuestra excelencia operativa, innovación constante y la confianza inquebrantable de nuestros clientes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5 mb-5">
+    <h2 class="display-5 title fw-bold mb-3"><span class="border-start border-4 border-primary ps-3">Nuestros valores como empresa</span></h2>
+    <div class="row  row-cols-md-2 gx-4 gy-4">
+        <div class="col">
+            <div class="card h-100 card-valor rounded-4">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title title"><i class="bi bi-hand-thumbs-up fs-2"></i>  Compromiso</h3>
+                    <p class="card-text text-dark">Nos comprometemos a entregar un servicio de excelencia cumpliendo rigurosamente con los plazos y la calidad prometida</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 card-valor rounded-4">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title title"><i class="bi bi-shield-check fs-2"></i>  Confianza</h3>
+                    <p class="card-text text-dark">Actuamos con honestidad y transparencia total. Tu seguridad y la de tus instalaciones es nuestra prioridad</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 card-valor rounded-4">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title title"><i class="bi bi-star fs-2"></i>  Calidad</h3>
+                    <p class="card-text text-dark">Utilizamos los mejores insumos y procesos supervisados para resultados impecables</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 card-valor rounded-4">
+                <div class="card-body text-center p-4">
+                    <h3 class="card-title title"><i class="bi bi-people fs-2"></i>  Respeto</h3>
+                    <p class="card-text text-dark">tratamos con dignidad a nuestros colaboradores, clientes y al medio ambiente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contenido %}
+
+{% block js%}
+{% endblock js%}

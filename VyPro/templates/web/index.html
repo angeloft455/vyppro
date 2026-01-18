@@ -1,0 +1,119 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block contenido %} 
+<section class="py-3 mb-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-white text-center p-4 rounded-5 shadow" style="background-color: #1F529B;">
+                <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden border border-2 border-white">
+                    <img src="{% static 'img/portada.png' %}" alt="portada">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5 mb-3">
+    <h1 class="display-5 title fw-bold py-3 mb-3"><span class="border-start border-4 border-primary ps-3">Nuestros Servicios</span></h1>
+    <div class="row g-4">
+        {% for item in servicio %}
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm card-servicio">
+                    {% if item.imagen %}
+                        <img src="{{ item.imagen.url }}" class="card-img-top img-servicio-cover" alt="{{ item.nombre }}">
+                    {% endif %}
+                    
+                    <div class="card-body p-4 text-center">
+                        <h5 class="card-title fw-bold text">{{ item.nombre }}</h5>    
+                        <a href="{% url 'detalle_servicio' item.id %}" class="btn btn-outline btn-sm rounded-pill mt-2">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="galeria" id="mi-galeria">
+    <div class="container">
+            <h2 class="display-5 title text-start text-white fw-bold py-3 py-3 mb-3"><span class="border-start border-4 border-white  ps-3">Nuestros trabajos</span></h2>
+            <div class="row g-4">
+                {% for foto in galeria %}
+                    <div class="col-md-4 col-sm-6">
+                        <div class="img-galeria-container shadow-sm">
+                            <img loading="lazy" src="{{ foto.imagen.url }}" class="img-galeria" alt="{{ foto.titulo }}">
+                            <div class="overlay-galeria">
+                                <div class="text-white fw-bold">{{foto.nombre}}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-12 text-center text-white">
+                        <p>Galeria de fotos de nuestros trabajos proximamente</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+            {% if galeria.has_previous %}
+                <a href="?page={{ galeria.previous_page_number }}#mi-galeria" class="btn btn-outlineF fw-bold me-2 shadow"> Anterior</a>
+            {% endif %}
+            
+            <span class="lead text text-white align-self-center"> Página {{ galeria.number }} de {{ galeria.paginator.num_pages }}</span>
+
+            {% if galeria.has_next %}
+                <a href="?page={{ galeria.next_page_number }}#mi-galeria" class="btn btn-outlineF fw-bold ms-2 shadow">Siguiente</a>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+
+<section class="py-5 bg-white my-5 fw-bold">
+    <div class="container">
+        <h2 class="display-5 title fw-bold py-5 mb-3"><span class="border-start border-4 border-primary ps-3">¿Por qué elegir VyPPro?</span></h2>
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-shield-check display-5 mb-3"></i>  Confianza</h5>
+                <p class="text-dark text">Personal capacitado y con referencias</p>
+            </div>
+            <div class="col-md-3">
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-clock-history display-5 mb-3"></i>   Puntualidad</h5>
+                <p class="text-dark text">Siempre a tiempo según lo programado</p>
+            </div>
+            <div class="col-md-3">
+                
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-droplet display-5 mb-3"></i>  Ecológicos</h5>
+                <p class="text-dark text">Insumos biodegradables certificados</p>
+            </div>
+            <div class="col-md-3">
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-person-lines-fill display-5 s mb-3"></i>  Personalizado</h5>
+                <p class="text-dark text">Nos adaptamos a tus necesidades</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5 fw-bold my-5">
+    <div class="container">
+        <h2 class="display-5 title fw-bold py-5 mb-3"><span class="border-start border-4 border-primary ps-3">¿Como contratarnos?</span> </h2>
+        <div class="row text-center"> 
+            <div class="col-md-4">
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-chat-text display-5 text mb-3"></i>  1. Cotiza</h5>
+                <p class="text-dark text">Llena nuestro formulario y cuéntanos qué necesitas</p>
+            </div>
+            <div class="col-md-4">
+                
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-calendar-check display-5 text mb-3"></i>  2. Agendamos</h5>
+                <p class="text-dark text">Coordinamos el día y la hora que más te acomode.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="title ps-3 fw-bold"><i class="bi bi-stars display-5 text mb-3"></i>  3. Listo</h5>
+                <p class="text-dark text">Nuestro equipo se encarga de dejar todo impecables</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock contenido %}
