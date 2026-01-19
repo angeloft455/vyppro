@@ -80,6 +80,7 @@ def contacto(request):
         
         if not apellido.replace(" ", "").isalpha():
             messages.error(request, 'El campo apellido no debe tener numeros o caracteres especiales')
+            return redirect('contacto')
 
         if len(empresa) < 3 or len(empresa) > 100:
             messages.error(request, 'La empresa debe tener entre 3 y 100 caracteres')
