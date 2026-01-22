@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('VyPro', '0002_alter_formulario_empresa_alter_formulario_nombre_and_more'),
+        ('VyPpro', '0002_alter_formulario_empresa_alter_formulario_nombre_and_more'),
     ]
 
     operations = [

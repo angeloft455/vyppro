@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('VyPro', '0016_alter_galeria_servicio'),
+        ('VyPpro', '0016_alter_galeria_servicio'),
     ]
 
     operations = [
@@ -18,11 +18,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='formulario',
             name='servicio',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPro.servicio', verbose_name='Tipo de servicios'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPpro.servicio', verbose_name='Tipo de servicios'),
         ),
         migrations.AlterField(
             model_name='galeria',
             name='servicio',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPro.servicio', verbose_name='Tipo de servicio'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPpro.servicio', verbose_name='Tipo de servicio'),
         ),
     ]

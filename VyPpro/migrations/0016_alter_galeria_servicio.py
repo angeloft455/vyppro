@@ -7,13 +7,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('VyPro', '0015_galeria_servicio'),
+        ('VyPpro', '0015_galeria_servicio'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='galeria',
             name='servicio',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPro.servicio'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPpro.servicio'),
         ),
     ]

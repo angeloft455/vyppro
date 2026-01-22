@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('empresa', models.CharField(max_length=80)),
                 ('correo', models.EmailField(max_length=254)),
                 ('mensaje', models.TextField()),
-                ('servicio', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPro.servicio')),
+                ('servicio', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPpro.servicio')),
             ],
         ),
     ]

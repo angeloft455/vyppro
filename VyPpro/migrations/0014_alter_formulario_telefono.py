@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('VyPro', '0013_alter_formulario_options_alter_galeria_options'),
+        ('VyPpro', '0013_alter_formulario_options_alter_galeria_options'),
     ]
 
     operations = [

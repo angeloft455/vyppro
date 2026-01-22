@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('VyPro', '0005_alter_formulario_id_alter_formulario_telefono_and_more'),
+        ('VyPpro', '0005_alter_formulario_id_alter_formulario_telefono_and_more'),
     ]
 
     operations = [
@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('nombre', models.CharField(max_length=30)),
                 ('imagen', models.ImageField(null=True, upload_to='servicio')),
-                ('servicio', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPro.servicio')),
+                ('servicio', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='VyPpro.servicio')),
             ],
             options={
                 'verbose_name': 'Fotos',
